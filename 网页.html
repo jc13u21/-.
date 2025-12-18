@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天津银行2026年新入行员工能力素质提升培训答疑</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            text-align: center;
+            padding: 25px 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #003366;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #4a6fa5;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex: 1;
+        }
+        
+        .left-column {
+            flex: 1;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .right-column {
+            flex: 2;
+            min-width: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .avatar-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            text-align: center;
+            flex-shrink: 0;
+            height: fit-content;
+        }
+        
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e6efff 0%, #c2d6ff 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 5px solid #f0f5ff;
+            box-shadow: 0 6px 15px rgba(0, 51, 102, 0.1);
+        }
+        
+        .avatar i {
+            font-size: 5.5rem;
+            color: #4a6fa5;
+        }
+        
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        
+        .avatar.active .avatar-img {
+            display: block;
+        }
+        
+        .avatar.active i {
+            display: none;
+        }
+        
+        .avatar-title {
+            font-size: 1.4rem;
+            color: #003366;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .avatar-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            max-width: 280px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        
+        .bank-info {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .bank-info h2 {
+            color: #003366;
+            border-bottom: 2px solid #e6efff;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+        
+        .bank-info-content {
+            flex: 1;
+            overflow-y: auto;
+            max-height: 400px;
+            padding-right: 10px;
+        }
+        
+        .bank-info p {
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        
+        .chat-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 700px;
+            flex: 1;
+        }
+        
+        .chat-header {
+            background-color: #003366;
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .chat-messages {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 15px 18px;
+            border-radius: 18px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .user-message {
+            align-self: flex-end;
+            background-color: #e6efff;
+            color: #003366;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .bot-message {
+            align-self: flex-start;
+            background-color: #f0f5ff;
+            color: #333;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .quick-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .quick-action-btn {
+            background-color: #e6efff;
+            color: #003366;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .quick-action-btn:hover {
+            background-color: #d1deff;
+            transform: translateY(-2px);
+        }
+        
+        .chat-input-container {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 12px;
+        }
+        
+        .chat-input {
+            flex-grow: 1;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+        
+        .chat-input:focus {
+            border-color: #4a6fa5;
+        }
+        
+        .send-btn, .voice-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background-color: #003366;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        
+        .send-btn:hover, .voice-btn:hover {
+            background-color: #002244;
+            transform: scale(1.05);
+        }
+        
+        .voice-btn.recording {
+            background-color: #cc3333;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(204, 51, 51, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(204, 51, 51, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(204, 51, 51, 0); }
+        }
+        
+        .admin-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            padding: 40px;
+            overflow-y: auto;
+            color: white;
+        }
+        
+        .admin-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a2e;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #4a6fa5;
+        }
+        
+        .admin-title {
+            font-size: 1.8rem;
+            color: #4a6fa5;
+        }
+        
+        .close-admin {
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .close-admin:hover {
+            color: white;
+        }
+        
+        .admin-section {
+            margin-bottom: 30px;
+            background-color: #16213e;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .admin-section h3 {
+            color: #4a6fa5;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #0f3460;
+            border: 1px solid #2d4263;
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .admin-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background-color: #4a6fa5;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a5a8a;
+        }
+        
+        .btn-secondary {
+            background-color: #555;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #444;
+        }
+        
+        .avatar-upload {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        #avatarPreview {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #0f3460;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        #avatarPreview i {
+            font-size: 2.5rem;
+            color: #4a6fa5;
+        }
+        
+        .avatar-preview-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        
+        #avatarPreview.active .avatar-preview-img {
+            display: block;
+        }
+        
+        #avatarPreview.active i {
+            display: none;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+        
+        .sync-status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #003366;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: none;
+            z-index: 1001;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .sync-status.show {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .sync-status.success {
+            background-color: #2e7d32;
+        }
+        
+        .sync-status.error {
+            background-color: #c62828;
+        }
+        
+        .server-info {
+            text-align: center;
+            margin-top: 10px;
+            color: #4a6fa5;
+            font-size: 0.9rem;
+        }
+        
+        /* 自定义滚动条 */
+        .bank-info-content::-webkit-scrollbar,
+        .chat-messages::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .bank-info-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .bank-info-content::-webkit-scrollbar-thumb,
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+        
+        .bank-info-content::-webkit-scrollbar-thumb:hover,
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .left-column, .right-column {
+                min-width: 100%;
+            }
+            
+            .chat-container {
+                height: 500px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .avatar {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .avatar i {
+                font-size: 4.5rem;
+            }
+            
+            .chat-container {
+                height: 450px;
+            }
+            
+            .admin-panel {
+                padding: 20px;
+            }
+            
+            .sync-status {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                text-align: center;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>天津银行2026年新入行员工能力素质提升培训答疑</h1>
+            <p class="subtitle">AI数字人助手为您提供培训相关问题的解答</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="left-column">
+                <div class="avatar-container">
+                    <div class="avatar" id="avatar">
+                        <i class="fas fa-robot"></i>
+                        <img src="" alt="AI助手头像" class="avatar-img" id="avatarImg">
+                    </div>
+                    <h3 class="avatar-title">AI培训助手</h3>
+                    <p class="avatar-subtitle">您好，新同事！欢迎加入天津银行大家庭。我是您的AI助手，可以为您解答关于2026年新员工培训的任何问题。</p>
+                </div>
+                
+                <div class="bank-info">
+                    <h2>天津银行介绍</h2>
+                    <div class="bank-info-content">
+                        <p id="bankIntroText">加载中...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <i class="fas fa-comments"></i> 培训答疑助手
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- 聊天消息将通过JavaScript动态添加 -->
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <input type="text" class="chat-input" id="chatInput" placeholder="请输入您的问题...">
+                        <button class="send-btn" id="sendBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <button class="voice-btn" id="voiceBtn">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 天津银行 干部研修院 | 本系统为2026年新员工培训专用</p>
+            <div class="server-info" id="serverInfo">正在连接服务器...</div>
+        </div>
+    </div>
+    
+    <!-- 管理员面板 -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-content">
+            <div class="admin-header">
+                <h2 class="admin-title">管理员操作面板</h2>
+                <button class="close-admin" id="closeAdmin">&times;</button>
+            </div>
+            
+            <div class="admin-section">
+                <h3>修改银行介绍</h3>
+                <div class="form-group">
+                    <label for="editBankIntro">天津银行介绍内容</label>
+                    <textarea id="editBankIntro" class="form-control"></textarea>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h3>修改AI助手形象</h3>
+                <div class="form-group">
+                    <label for="avatarUpload">上传新的AI助手头像</label>
+                    <div class="avatar-upload">
+                        <div class="avatar" id="avatarPreview">
+                            <i class="fas fa-robot"></i>
+                            <img src="" alt="预览头像" class="avatar-preview-img" id="avatarPreviewImg">
+                        </div>
+                        <input type="file" id="avatarUpload" class="form-control" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h3>修改自动回复内容</h3>
+                <div class="form-group">
+                    <label for="editWelcome">欢迎语</label>
+                    <textarea id="editWelcome" class="form-control"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editTrainingIntro">培训介绍回复</label>
+                    <textarea id="editTrainingIntro" class="form-control"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editTrainingSchedule">培训安排回复</label>
+                    <textarea id="editTrainingSchedule" class="form-control"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editActivitySchedule">活动安排回复</label>
+                    <textarea id="editActivitySchedule" class="form-control"></textarea>
+                </div>
+            </div>
+            
+            <div class="admin-buttons">
+                <button class="btn btn-secondary" id="resetBtn">恢复默认</button>
+                <button class="btn btn-primary" id="saveAdminBtn">保存到服务器</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 同步状态提示 -->
+    <div class="sync-status" id="syncStatus">
+        <i class="fas fa-sync-alt fa-spin"></i>
+        <span>正在同步数据...</span>
+    </div>
+
+    <script>
+        // 服务器地址 - 您需要部署后端服务器后更新此地址
+        // 本地测试: http://localhost:3000
+        // 线上部署: https://your-domain.com
+        const SERVER_URL = 'https://tianjin-bank-assistant-server.onrender.com'; // 示例线上地址
+        
+        // 默认回复内容
+        const defaultResponses = {
+            welcome: "您好，新同事！欢迎加入天津银行大家庭！我是您的AI培训助手，可以为您解答关于2026年新员工培训的相关问题。您可以直接在下方输入问题，也可以点击右侧麦克风按钮进行语音输入。",
+            trainingIntro: "亲爱的新伙伴们，欢迎加入天津银行这个温暖的大家庭！为了让大家更快褪去初入职场的忐忑，顺利开启职业生涯的新篇章，我们精心筹备了这场专属成长盛宴。本次培训紧扣 '能力素质提速战 2.0' 部署，搭建了从入职赋能到成长进阶 再到潜能释放' 的全周期培养平台，不仅会帮大家筑牢纪律规矩底线、夯实业务知识基础、提升履岗实战能力，更会安排丰富的活动通过温暖氛围缓解你的职场不适，用多元课程和贴心陪伴助力你快速完成角色转变。希望在这里，你既能收获专业成长的干货，也能结识志同道合的战友，更能感受到公司对青年人才的珍视与期许，愿大家在这段旅程中学有所成、心有所安，我们期待与您在培训中的的见面！",
+            trainingSchedule: "培训拟于2026年1月中下旬组织开展，预计12天，培训期间集中封闭管理，统一安排食宿，培训期间严禁饮酒，未经培训管理人员及所在单位同意严禁离开培训场地，如确需请假需联系培训管理人员履行请假流程。",
+            activitySchedule: "亲爱的新伙伴们，为了让大家能更轻松的交流、温暖的陪伴和有趣的探索，我们安排丰富的活动。<br><br>1. <strong>班委会竞选</strong>：想锻炼组织能力、为班级出份力？这场竞选给你展示的舞台！通过民主选举组建临时班委会，你可以竞选班长、学习委员、纪律委员、文艺委员、组织委员等岗位，和伙伴们一起参与班级学习、生活、纪律管理，既解锁职场'管理初体验'，也能快速拉近彼此距离～<br><br>2. <strong>交流分享会</strong>：我们邀请了近3年表现优异的师兄师姐'回家'！他们会毫无保留地分享职场适应技巧、业务成长干货，甚至是曾经踩过的'小坑'，帮你少走弯路。有任何疑问都能大胆提问，前辈们的亲身经验会让你的职场之路更有方向～<br><br>3. <strong>结训汇报</strong>：这是专属于2026届新伙伴的'成长秀场'，不用拘谨、无需怯场，在这里，你可以在舞台上尽情释放才华、分享收获，展现青春风采，让我们用创意与热忱，定格这段满是收获与陪伴的成长旅程，留下最鲜活、最难忘的专属印记～"
+        };
+        
+        // 默认银行介绍
+        const defaultBankIntro = "天津银行创建于1986年11月1日，1996年在城市信用社及联社基础上组建为'天津城市合作银行'，1998年更名为'天津市商业银行'，2007年更名为'天津银行'并开始实施跨区域经营，先后在北京、上海、河北、山东、四川等省市设立分支机构。截至2025年6月末，在全国范围内设有包括1家营业部、7家一级分行、6家二级分行及6家中心支行在内的共计223家营业机构；发起设立了天银金融租赁股份有限公司，参股投资了天津京东消费金融有限公司，并在宁夏和新疆自治区发起设立了7家津汇村镇银行。同时与全球80多个国家和地区近800家境内外银行及其分支机构建立了代理行关系。";
+        
+        // 全局变量
+        let settings = {
+            bankIntro: defaultBankIntro,
+            responses: defaultResponses,
+            avatarImage: ''
+        };
+        
+        // DOM元素
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const voiceBtn = document.getElementById('voiceBtn');
+        const adminPanel = document.getElementById('adminPanel');
+        const closeAdmin = document.getElementById('closeAdmin');
+        const saveAdminBtn = document.getElementById('saveAdminBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const editBankIntro = document.getElementById('editBankIntro');
+        const editWelcome = document.getElementById('editWelcome');
+        const editTrainingIntro = document.getElementById('editTrainingIntro');
+        const editTrainingSchedule = document.getElementById('editTrainingSchedule');
+        const editActivitySchedule = document.getElementById('editActivitySchedule');
+        const avatarUpload = document.getElementById('avatarUpload');
+        const avatarImg = document.getElementById('avatarImg');
+        const avatarPreview = document.getElementById('avatarPreview');
+        const avatarPreviewImg = document.getElementById('avatarPreviewImg');
+        const bankIntroText = document.getElementById('bankIntroText');
+        const avatar = document.getElementById('avatar');
+        const syncStatus = document.getElementById('syncStatus');
+        const serverInfo = document.getElementById('serverInfo');
+        
+        // 语音识别
+        let recognition = null;
+        let isRecording = false;
+        
+        // 初始化语音识别
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.lang = 'zh-CN';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                chatInput.value = transcript;
+                voiceBtn.classList.remove('recording');
+                isRecording = false;
+                sendMessage();
+            };
+            
+            recognition.onerror = (event) => {
+                console.error('语音识别错误:', event.error);
+                voiceBtn.classList.remove('recording');
+                isRecording = false;
+                addMessage('语音识别失败，请重试或直接输入文字。', 'bot');
+            };
+            
+            recognition.onend = () => {
+                voiceBtn.classList.remove('recording');
+                isRecording = false;
+            };
+        }
+        
+        // ==================== 服务器API函数 ====================
+        
+        // 显示同步状态
+        function showSyncStatus(message, type = 'info') {
+            syncStatus.querySelector('span').textContent = message;
+            syncStatus.className = 'sync-status show';
+            
+            if (type === 'success') {
+                syncStatus.classList.add('success');
+                syncStatus.querySelector('i').className = 'fas fa-check-circle';
+            } else if (type === 'error') {
+                syncStatus.classList.add('error');
+                syncStatus.querySelector('i').className = 'fas fa-exclamation-circle';
+            } else {
+                syncStatus.querySelector('i').className = 'fas fa-sync-alt fa-spin';
+            }
+            
+            // 3秒后自动隐藏
+            if (type !== 'info') {
+                setTimeout(() => {
+                    syncStatus.classList.remove('show');
+                }, 3000);
+            }
+        }
+        
+        // 从服务器加载设置
+        async function loadSettingsFromServer() {
+            try {
+                showSyncStatus('正在从服务器加载设置...', 'info');
+                
+                const response = await fetch(`${SERVER_URL}/api/settings`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    settings = result.data;
+                    updatePageWithSettings();
+                    showSyncStatus('设置加载成功', 'success');
+                    serverInfo.innerHTML = `<i class="fas fa-check-circle" style="color: #2e7d32;"></i> 已连接到服务器: ${SERVER_URL}`;
+                } else {
+                    throw new Error('服务器返回错误');
+                }
+            } catch (error) {
+                console.error('从服务器加载设置失败:', error);
+                showSyncStatus('加载失败，使用默认设置', 'error');
+                serverInfo.innerHTML = `<i class="fas fa-exclamation-triangle" style="color: #ff9800;"></i> 服务器连接失败，使用默认设置`;
+                
+                // 使用默认设置
+                settings = {
+                    bankIntro: defaultBankIntro,
+                    responses: defaultResponses,
+                    avatarImage: ''
+                };
+                updatePageWithSettings();
+            }
+        }
+        
+        // 保存设置到服务器
+        async function saveSettingsToServer() {
+            try {
+                showSyncStatus('正在保存设置到服务器...', 'info');
+                
+                // 更新设置对象
+                const updatedSettings = {
+                    bankIntro: editBankIntro.value.trim(),
+                    responses: {
+                        welcome: editWelcome.value.trim(),
+                        trainingIntro: editTrainingIntro.value.trim(),
+                        trainingSchedule: editTrainingSchedule.value.trim(),
+                        activitySchedule: editActivitySchedule.value.trim()
+                    },
+                    avatarImage: settings.avatarImage // 先保留原有头像
+                };
+                
+                // 如果有新头像，更新设置
+                if (avatarUpload.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        updatedSettings.avatarImage = e.target.result;
+                        completeSaveToServer(updatedSettings);
+                    };
+                    reader.readAsDataURL(avatarUpload.files[0]);
+                } else {
+                    await completeSaveToServer(updatedSettings);
+                }
+            } catch (error) {
+                console.error('保存设置失败:', error);
+                showSyncStatus('保存失败', 'error');
+            }
+        }
+        
+        // 完成保存到服务器
+        async function completeSaveToServer(updatedSettings) {
+            try {
+                const response = await fetch(`${SERVER_URL}/api/settings`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(updatedSettings)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // 更新本地设置
+                    settings = updatedSettings;
+                    
+                    showSyncStatus('设置保存成功', 'success');
+                    updatePageWithSettings();
+                    
+                    // 3秒后关闭管理员面板
+                    setTimeout(() => {
+                        adminPanel.style.display = 'none';
+                    }, 3000);
+                } else {
+                    showSyncStatus('保存失败: ' + (result.message || '未知错误'), 'error');
+                }
+            } catch (error) {
+                console.error('保存到服务器失败:', error);
+                showSyncStatus('保存失败: ' + error.message, 'error');
+            }
+        }
+        
+        // ==================== 页面更新函数 ====================
+        
+        // 使用设置更新页面
+        function updatePageWithSettings() {
+            // 设置银行介绍
+            bankIntroText.textContent = settings.bankIntro;
+            
+            // 设置AI助手头像
+            if (settings.avatarImage) {
+                avatarImg.src = settings.avatarImage;
+                avatar.classList.add('active');
+                avatarPreviewImg.src = settings.avatarImage;
+                avatarPreview.classList.add('active');
+            }
+            
+            // 设置管理员面板中的内容
+            editBankIntro.value = settings.bankIntro;
+            editWelcome.value = settings.responses.welcome;
+            editTrainingIntro.value = settings.responses.trainingIntro;
+            editTrainingSchedule.value = settings.responses.trainingSchedule;
+            editActivitySchedule.value = settings.responses.activitySchedule;
+        }
+        
+        // 初始化页面内容
+        async function initPage() {
+            // 加载设置
+            await loadSettingsFromServer();
+            
+            // 显示欢迎消息
+            setTimeout(() => {
+                addMessage(settings.responses.welcome, 'bot');
+            }, 500);
+        }
+        
+        // 添加消息到聊天窗口
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            // 如果文本包含HTML换行标签，则使用innerHTML
+            if (text.includes('<br>')) {
+                messageDiv.innerHTML = `<p>${text}</p>`;
+            } else {
+                messageDiv.innerHTML = `<p>${text}</p>`;
+            }
+            
+            // 如果是机器人回复，添加快速操作按钮
+            if (sender === 'bot' && text === settings.responses.welcome) {
+                const quickActions = document.createElement('div');
+                quickActions.className = 'quick-actions';
+                quickActions.innerHTML = `
+                    <button class="quick-action-btn" data-question="培训介绍">培训介绍</button>
+                    <button class="quick-action-btn" data-question="培训安排">培训安排</button>
+                    <button class="quick-action-btn" data-question="活动安排">活动安排</button>
+                `;
+                messageDiv.appendChild(quickActions);
+                
+                // 重新绑定快速操作按钮事件
+                setTimeout(() => {
+                    document.querySelectorAll('.quick-action-btn').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const question = this.getAttribute('data-question');
+                            chatInput.value = question;
+                            sendMessage();
+                        });
+                    });
+                }, 100);
+            }
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // 处理用户发送的消息
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+            
+            // 添加用户消息
+            addMessage(message, 'user');
+            
+            // 清空输入框
+            chatInput.value = '';
+            
+            // 检查是否为管理员命令
+            if (message === '管理员操作') {
+                // 显示管理员面板
+                adminPanel.style.display = 'block';
+                addMessage('已进入管理员操作模式。', 'bot');
+                return;
+            }
+            
+            // 模拟AI回复（延迟效果）
+            setTimeout(() => {
+                let response = '';
+                
+                // 根据关键词匹配回复
+                if (message.includes('培训介绍') || message.includes('培训内容') || message.includes('培训是什么')) {
+                    response = settings.responses.trainingIntro;
+                } else if (message.includes('培训安排') || message.includes('培训时间') || message.includes('培训日期') || message.includes('培训多久')) {
+                    response = settings.responses.trainingSchedule;
+                } else if (message.includes('活动安排') || message.includes('活动内容') || message.includes('活动有哪些')) {
+                    response = settings.responses.activitySchedule;
+                } else if (message.includes('你好') || message.includes('您好') || message.includes('嗨') || message.includes('hi') || message.includes('hello')) {
+                    response = settings.responses.welcome;
+                } else if (message.includes('天津银行') || message.includes('银行介绍') || message.includes('银行情况')) {
+                    response = `关于天津银行的介绍：<br><br>${settings.bankIntro}`;
+                } else {
+                    response = "您好！我主要回答关于天津银行2026年新员工培训的相关问题，例如培训介绍、培训安排、活动安排等。您可以点击上方快速提问按钮，或直接输入相关问题。";
+                }
+                
+                addMessage(response, 'bot');
+            }, 600);
+        }
+        
+        // 语音识别功能
+        function toggleVoiceRecognition() {
+            if (!recognition) {
+                addMessage('您的浏览器不支持语音识别功能，请使用最新版Chrome、Edge或Safari浏览器。', 'bot');
+                return;
+            }
+            
+            if (isRecording) {
+                recognition.stop();
+                voiceBtn.classList.remove('recording');
+                isRecording = false;
+            } else {
+                recognition.start();
+                voiceBtn.classList.add('recording');
+                isRecording = true;
+                addMessage('正在聆听您的问题...', 'bot');
+            }
+        }
+        
+        // 上传头像
+        function handleAvatarUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            if (!file.type.match('image.*')) {
+                alert('请上传图片文件！');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                avatarPreviewImg.src = e.target.result;
+                avatarPreview.classList.add('active');
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        // 恢复默认设置
+        function resetToDefaults() {
+            if (confirm('确定要恢复所有默认设置吗？这会将所有内容恢复为初始状态。')) {
+                // 重置设置
+                settings = {
+                    bankIntro: defaultBankIntro,
+                    responses: defaultResponses,
+                    avatarImage: ''
+                };
+                
+                // 更新管理员面板中的内容
+                editBankIntro.value = settings.bankIntro;
+                editWelcome.value = settings.responses.welcome;
+                editTrainingIntro.value = settings.responses.trainingIntro;
+                editTrainingSchedule.value = settings.responses.trainingSchedule;
+                editActivitySchedule.value = settings.responses.activitySchedule;
+                
+                // 重置头像预览
+                avatarPreviewImg.src = '';
+                avatarPreview.classList.remove('active');
+                avatarUpload.value = '';
+                
+                addMessage('已重置为默认设置，请点击"保存到服务器"按钮保存更改。', 'bot');
+            }
+        }
+        
+        // 事件监听器
+        sendBtn.addEventListener('click', sendMessage);
+        
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        voiceBtn.addEventListener('click', toggleVoiceRecognition);
+        
+        // 管理员相关事件
+        document.addEventListener('keydown', function(e) {
+            // 检查是否按下了Ctrl+Shift+M (管理员快捷键)
+            if (e.ctrlKey && e.shiftKey && e.key === 'M') {
+                adminPanel.style.display = 'block';
+                addMessage('已进入管理员操作模式。', 'bot');
+            }
+        });
+        
+        closeAdmin.addEventListener('click', function() {
+            adminPanel.style.display = 'none';
+        });
+        
+        saveAdminBtn.addEventListener('click', saveSettingsToServer);
+        
+        resetBtn.addEventListener('click', resetToDefaults);
+        
+        avatarUpload.addEventListener('change', handleAvatarUpload);
+        
+        // 初始化页面
+        window.onload = function() {
+            initPage();
+        };
+    </script>
+</body>
+</html>
