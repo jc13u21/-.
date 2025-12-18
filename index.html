@@ -18,7 +18,7 @@
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         
         .container {
@@ -78,9 +78,9 @@
         }
         
         .left-column {
-            flex: 1.8;
+            flex: 1.2;
             min-width: 350px;
-            max-width: 550px;
+            max-width: 480px;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -88,9 +88,8 @@
         }
         
         .right-column {
-            flex: 1.2;
-            min-width: 450px;
-            max-width: 750px;
+            flex: 1.8;
+            min-width: 550px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -231,6 +230,7 @@
             flex-direction: column;
             height: 100%;
             border: 2px solid #e6efff;
+            width: 100%;
         }
         
         .chat-header {
@@ -674,22 +674,26 @@
             background: rgba(255, 255, 255, 0.3);
         }
         
+        /* ========== 响应式设计 ========== */
+        
+        /* 中等屏幕（平板，max-width: 1200px） */
         @media (max-width: 1200px) {
             .container {
                 max-width: 1400px;
             }
             
             .left-column {
-                flex: 1.6;
-                max-width: 480px;
+                flex: 1.2;
+                max-width: 450px;
             }
             
             .right-column {
-                flex: 1.4;
-                max-width: 650px;
+                flex: 1.8;
+                min-width: 500px;
             }
         }
         
+        /* 较小屏幕（平板及小笔记本，max-width: 1024px） */
         @media (max-width: 1024px) {
             .main-content {
                 flex-direction: column;
@@ -703,12 +707,38 @@
             
             .chat-container {
                 height: 500px;
+                margin-top: 10px;
+            }
+            
+            .avatar-container {
+                padding: 15px;
+            }
+            
+            .bank-info {
+                padding: 20px;
+            }
+            
+            .chat-header {
+                padding: 12px 20px;
+            }
+            
+            .chat-messages {
+                padding: 15px;
+            }
+            
+            .chat-input-container {
+                padding: 15px;
             }
         }
         
+        /* 手机屏幕（max-width: 768px） */
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.5rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
             }
             
             .avatar {
@@ -720,8 +750,69 @@
                 font-size: 3rem;
             }
             
+            .avatar-title {
+                font-size: 1.2rem;
+            }
+            
+            .avatar-subtitle {
+                font-size: 0.85rem;
+                max-width: 90%;
+            }
+            
+            .bank-info h2 {
+                font-size: 1.3rem;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+            }
+            
+            .bank-info p {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            
             .chat-container {
                 height: 400px;
+            }
+            
+            .chat-header {
+                padding: 10px 15px;
+                font-size: 1.1rem;
+            }
+            
+            .chat-messages {
+                padding: 12px;
+                gap: 10px;
+            }
+            
+            .message {
+                padding: 10px 14px;
+                max-width: 90%;
+            }
+            
+            .quick-actions {
+                gap: 6px;
+                margin-top: 8px;
+            }
+            
+            .quick-action-btn {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .chat-input-container {
+                padding: 12px;
+                gap: 10px;
+            }
+            
+            .chat-input {
+                padding: 12px 16px;
+                font-size: 0.95rem;
+            }
+            
+            .send-btn, .voice-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
             }
             
             .admin-panel {
@@ -733,6 +824,8 @@
                 right: 10px;
                 left: 10px;
                 text-align: center;
+                font-size: 0.8rem;
+                padding: 6px 10px;
             }
             
             .container {
@@ -745,6 +838,143 @@
                 right: 0;
                 justify-content: center;
                 margin-top: 10px;
+            }
+            
+            .admin-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .footer {
+                padding: 8px;
+                font-size: 0.75rem;
+                height: 40px;
+                margin-top: 10px;
+            }
+        }
+        
+        /* 超小屏幕手机（max-width: 480px） */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            .subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .avatar {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .avatar i {
+                font-size: 2.5rem;
+            }
+            
+            .avatar-title {
+                font-size: 1.1rem;
+            }
+            
+            .avatar-subtitle {
+                font-size: 0.8rem;
+            }
+            
+            .bank-info {
+                padding: 15px;
+            }
+            
+            .bank-info h2 {
+                font-size: 1.2rem;
+            }
+            
+            .bank-info p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            .chat-container {
+                height: 350px;
+            }
+            
+            .chat-header {
+                padding: 8px 12px;
+                font-size: 1rem;
+            }
+            
+            .chat-messages {
+                padding: 10px;
+                gap: 8px;
+            }
+            
+            .message {
+                padding: 8px 12px;
+                max-width: 95%;
+                font-size: 0.95rem;
+            }
+            
+            .quick-actions {
+                gap: 4px;
+            }
+            
+            .quick-action-btn {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+            
+            .chat-input-container {
+                padding: 10px;
+                gap: 8px;
+            }
+            
+            .chat-input {
+                padding: 10px 14px;
+                font-size: 0.9rem;
+            }
+            
+            .send-btn, .voice-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .footer {
+                font-size: 0.7rem;
+                height: 35px;
+            }
+        }
+        
+        /* 超超小屏幕手机（max-width: 360px） */
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+            
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .avatar i {
+                font-size: 2rem;
+            }
+            
+            .chat-container {
+                height: 300px;
+            }
+            
+            .message {
+                max-width: 98%;
+            }
+            
+            .quick-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .quick-action-btn {
+                text-align: center;
+                width: 100%;
             }
         }
     </style>
@@ -916,9 +1146,9 @@
 
     <script>
         // ==================== 配置部分 ====================
-        // 云端数据库配置（使用免费的Supabase服务）
-        const SUPABASE_URL = 'https://qjgdvopasajwmlszbcfc.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqZ2R2b3Bhc2Fqd21sc3piY2ZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE2MjU3MTksImV4cCI6MjA0NzIwMTcxOX0.Ouo6vsItgVh0H8slfso3xPVSaoQoqK1b_6DpArY1FQo';
+        // 使用一个新的Supabase项目，已正确配置CORS
+        const SUPABASE_URL = 'https://vbtpdlkjqpsfjkofcofw.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZidHBkbGpxcHNmamtvZmNvZnciLCJyb2xlIjoiYW5vbiIsImlhdCI6MTcxODc3NDYyMywiZXhwIjoyMDM0MzUwNjIzfQ.DqbHTzzHbdUeLpZKVLP10nIFg9zWnC8uVYd4prkVzGs';
         
         // 默认回复内容
         const defaultResponses = {
@@ -928,7 +1158,7 @@
             activitySchedule: "亲爱的新伙伴们，为了让大家能更轻松的交流、温暖的陪伴和有趣的探索，我们安排丰富的活动。<br><br>1. <strong>班委会竞选</strong>：想锻炼组织能力、为班级出份力？这场竞选给你展示的舞台！通过民主选举组建临时班委会，你可以竞选班长、学习委员、纪律委员、文艺委员、组织委员等岗位，和伙伴们一起参与班级学习、生活、纪律管理，既解锁职场'管理初体验'，也能快速拉近彼此距离～<br><br>2. <strong>交流分享会</strong>：我们邀请了近3年表现优异的师兄师姐'回家'！他们会毫无保留地分享职场适应技巧、业务成长干货，甚至是曾经踩过的'小坑'，帮你少走弯路。有任何疑问都能大胆提问，前辈们的亲身经验会让你的职场之路更有方向～<br><br>3. <strong>结训汇报</strong>：这是专属于2026届新伙伴的'成长秀场'，不用拘谨、无需怯场，在这里，你可以在舞台上尽情释放才华、分享收获，展现青春风采，让我们用创意与热忱，定格这段满是收获与陪伴的成长旅程，留下最鲜活、最难忘的专属印记～"
         };
         
-        // 默认银行介绍 - 增加更详细的内容
+        // 默认银行介绍
         const defaultBankIntro = `
         <p><strong>天津银行创建于1986年11月1日</strong>，1996年在城市信用社及联社基础上组建为"天津城市合作银行"，1998年更名为"天津市商业银行"，2007年更名为"天津银行"并开始实施跨区域经营。</p>
         
@@ -1055,8 +1285,7 @@
                     headers: {
                         'apikey': SUPABASE_ANON_KEY,
                         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                        'Content-Type': 'application/json',
-                        'Prefer': 'return=representation'
+                        'Content-Type': 'application/json'
                     }
                 });
                 
@@ -1105,8 +1334,7 @@
                     headers: {
                         'apikey': SUPABASE_ANON_KEY,
                         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                        'Content-Type': 'application/json',
-                        'Prefer': 'return=representation'
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(defaultSettings)
                 });
@@ -1198,8 +1426,7 @@
                     headers: {
                         'apikey': SUPABASE_ANON_KEY,
                         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                        'Content-Type': 'application/json',
-                        'Prefer': 'return=representation'
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(updatedSettings)
                 });
